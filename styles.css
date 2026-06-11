@@ -324,39 +324,6 @@ h1 {
   transform: rotate(-12deg);
 }
 
-.trail-layer {
-  position: fixed;
-  inset: 0;
-  z-index: 35;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.trail-photo {
-  position: absolute;
-  width: clamp(72px, 9vw, 130px);
-  aspect-ratio: 3 / 2;
-  border: 3px solid var(--white);
-  object-fit: cover;
-  filter: grayscale(1) contrast(1.5);
-  transform: translate(-50%, -50%) rotate(var(--rotation));
-  box-shadow: 4px 5px 0 #0008;
-  animation: trail-out 800ms steps(5) forwards;
-}
-
-@keyframes trail-out {
-  0% {
-    opacity: 0.95;
-  }
-  70% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -70%) rotate(var(--rotation)) scale(0.82);
-  }
-}
-
 footer {
   display: flex;
   justify-content: space-between;

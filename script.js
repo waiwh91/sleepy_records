@@ -1,13 +1,5 @@
 const frames = document.querySelectorAll(".frame");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const trailLayer = document.querySelector(".trail-layer");
-const trailSources = [
-  "assets/photos/street.jpg",
-  "assets/photos/field.jpg",
-  "assets/photos/live.jpg",
-];
-let lastTrail = 0;
-let trailIndex = 0;
 
 frames.forEach((frame) => {
   const strength = Number(frame.dataset.shift || 10);
@@ -19,20 +11,6 @@ frames.forEach((frame) => {
     const y = event.clientY / window.innerHeight - 0.5;
     frame.style.setProperty("--mx", `${x * strength}px`);
     frame.style.setProperty("--my", `${y * strength}px`);
-
-    const now = performance.now();
-    if (now - lastTrail > 95) {
-      const image = document.createElement("img");
-      image.className = "trail-photo";
-      image.src = trailSources[trailIndex % trailSources.length];
-      image.style.left = `${event.clientX}px`;
-      image.style.top = `${event.clientY}px`;
-      image.style.setProperty("--rotation", `${-9 + Math.random() * 18}deg`);
-      trailLayer.append(image);
-      window.setTimeout(() => image.remove(), 850);
-      trailIndex += 1;
-      lastTrail = now;
-    }
   });
 
   frame.addEventListener("pointerleave", () => {
