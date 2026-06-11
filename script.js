@@ -24,11 +24,6 @@ frames.forEach((frame) => {
   });
 });
 
-document.querySelector(".hint").addEventListener("click", (event) => {
-  event.stopPropagation();
-  event.currentTarget.closest(".frame").classList.toggle("is-altered");
-});
-
 let activeDrag = null;
 
 document.querySelectorAll(".draggable").forEach((item) => {

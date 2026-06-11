@@ -166,22 +166,6 @@ h1 {
   mix-blend-mode: exclusion;
 }
 
-.hint {
-  position: absolute;
-  right: 2vw;
-  bottom: 2vh;
-  z-index: 3;
-  padding: 0;
-  border: 0;
-  border-bottom: 1px solid;
-  color: var(--black);
-  background: transparent;
-  font-family: var(--hand);
-  font-size: 1.25rem;
-  cursor: pointer;
-  transform: rotate(3deg);
-}
-
 .issue {
   position: absolute;
   top: 46%;
@@ -313,17 +297,6 @@ h1 {
   transform: rotate(-4deg);
 }
 
-.drag-note {
-  position: absolute;
-  top: 14%;
-  right: 30%;
-  z-index: 4;
-  color: var(--black);
-  font-family: var(--hand);
-  font-size: 1.5rem;
-  transform: rotate(-12deg);
-}
-
 footer {
   display: flex;
   justify-content: space-between;
@@ -350,10 +323,6 @@ footer span {
     left: 5vw;
     bottom: 7vh;
     font-size: 29vw;
-  }
-
-  .hint {
-    right: 18px;
   }
 
   .frame-live > img {
@@ -411,9 +380,6 @@ footer span {
     text-align: right;
   }
 
-  .drag-note {
-    display: none;
-  }
 }
 
 @media (hover: none) {
