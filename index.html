@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="trail-layer" aria-hidden="true"></div>
     <header>
       <a class="logo" href="#top">sleepy records</a>
       <nav>
-        <a href="https://sleepingsheep.bandcamp.com/" target="_blank" rel="noreferrer">listen ↗</a>
-        <a href="https://sleepingsheep.bandcamp.com/contact" target="_blank" rel="noreferrer">contact ↗</a>
+        <a href="https://sleepingsheep.bandcamp.com/" target="_blank" rel="noreferrer">listen +</a>
+        <a href="https://sleepingsheep.bandcamp.com/contact" target="_blank" rel="noreferrer">contact +</a>
       </nav>
     </header>
 
@@ -31,43 +32,45 @@
           fetchpriority="high"
         />
         <h1>sleepy<br />records</h1>
-        <button class="hint" type="button">touch the pictures</button>
+        <button class="hint" type="button">press / move</button>
+        <span class="issue">no. 000</span>
       </section>
 
       <section class="frame frame-field" data-shift="10">
         <img src="assets/photos/field.jpg" alt="Cyclists crossing a green field" loading="lazy" />
         <a
-          class="release release-one"
+          class="release release-one draggable"
           href="https://sleepingsheep.bandcamp.com/album/sleepingsheep"
           target="_blank"
           rel="noreferrer"
           aria-label="Sleepingsheep on Bandcamp"
         >
           <img src="https://f4.bcbits.com/img/a3454929594_16.jpg" alt="Sleepingsheep cover" />
-          <span>001 ↗</span>
+          <span>001 +</span>
         </a>
         <p>beautiful noise makers</p>
+        <span class="drag-note">drag it</span>
       </section>
 
       <section class="frame frame-live" data-shift="18">
         <img src="assets/photos/live.jpg" alt="Sleepingsheep live" loading="lazy" />
         <a
-          class="release release-two"
+          class="release release-two draggable"
           href="https://sleepingsheep.bandcamp.com/track/flowers-demo"
           target="_blank"
           rel="noreferrer"
           aria-label="Flowers Demo on Bandcamp"
         >
           <img src="https://f4.bcbits.com/img/a1087075343_16.jpg" alt="Flowers Demo cover" />
-          <span>demo ↗</span>
+          <span>demo +</span>
         </a>
-        <span class="mark" aria-hidden="true">×</span>
+        <span class="mark" aria-hidden="true">X</span>
       </section>
     </main>
 
     <footer>
-      <a href="#top">sleep again ↑</a>
-      <span>上海</span>
+      <a href="#top">again ^</a>
+      <span>SH / CN</span>
     </footer>
 
     <script src="script.js"></script>
